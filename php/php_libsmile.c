@@ -18,6 +18,8 @@
 #include "config.h"
 #endif
 
+#ifndef SMILE_DO_NOT_INCLUDE_PHP_IF
+
 #include "php.h"
 #include "php_ini.h"
 #include "ext/standard/info.h"
@@ -115,3 +117,5 @@ PHP_FUNCTION(libsmile_decode)
     smile_decode_block(result, BUFFER_SIZE, input, len);
     RETVAL_STRINGL(result, strlen(result), 1);
 }
+
+#endif

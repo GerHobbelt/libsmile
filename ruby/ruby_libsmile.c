@@ -1,3 +1,5 @@
+#ifndef SMILE_DO_NOT_INCLUDE_RUBY_IF
+
 #include "ruby.h"
 
 #include "smile.h"
@@ -35,3 +37,5 @@ void Init_libsmile()
   rb_define_method(rb_cParser, "initialize", libsmile_init, 0);
   rb_define_method(rb_cParser, "decode", libsmile_decode, 1);
 }
+
+#endif
