@@ -31,7 +31,13 @@
 
 static const char unsmile_usage[] = "unsmile [-p|--pretty] <file>";
 
-int main(int argc, char **argv)
+
+
+#if defined(BUILD_MONOLITHIC)
+#define main(cnt, arr)      smile_unsmile_main(cnt, arr)
+#endif
+
+int main(int argc, const char** argv)
 {
     int opt, fd = -1, status = 0, pretty = 0, ret = 0, idx = 0, utf8 = 1;
     struct stat st;
