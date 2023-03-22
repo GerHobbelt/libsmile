@@ -1,6 +1,6 @@
 == Libsmile
 
-C implementation of the Smile binary format (http://wiki.fasterxml.com/SmileFormatSpec).
+C implementation of the Smile binary format (https://github.com/FasterXML/smile-format-specification).
 
 The library ships with a command line tool (unsmile) to decode binary files on the command line, as well as extensions for scripting languages.
 
